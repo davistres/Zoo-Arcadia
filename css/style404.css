@@ -5,14 +5,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 100vh;
   text-align: center;
 }
 
 .container404 {
-  max-width: 800px;
+  max-width: 1200px;
   padding: 20px;
-  margin: 7vh 0 0 0;
+  margin: 0 0 0 0;
   background-color: #ffffff;
   border-radius: 64px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
