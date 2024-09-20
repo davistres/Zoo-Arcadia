@@ -4,24 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Zoo ARCADIA</title>
 </head>
 
 <body>
-    <header>
-        <p>Mon header</p>
+    <!-- Header Desktop -->
+    <header class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="ressources/logo/logo.png" alt="Logo ARCADIA" />
+            <h1 class="primarymobile beige">ARCADIA</h1>
+        </div>
+
+        <!-- Navigation links (Desktop) -->
+        <ul>
+            <li><a href="#">Page d'accueil</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Habitats</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Connexion</a></li>
+        </ul>
+
+        <!-- Burger Menu (Mobile) -->
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
     </header>
 
+
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#"><img src="ressources/logo/House.png" alt="Home Icon" />Accueil</a>
+        <a href="#"><img src="ressources/logo/Cup.png" alt="Cup Icon" />Services</a>
+        <a href="#"><img src="ressources/logo/Bank.png" alt="Bank Icon" />Habitats</a>
+
+        <a href="#"><img src="ressources/logo/Pc.png" alt="PC Icon" />Contact</a>
+        <a href="#"><img src="ressources/logo/Lock.png" alt="Lock Icon" />Connexion</a>
+        <!-- Croix de fermeture -->
+        <div class="close-menu" id="close-menu">✕</div>
+    </div>
+
+    <!-- MAIN CONTENT -->
     <main id="main-page">
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>Mon footer</p>
     </footer>
 
 
     <script type="module" src="Router/Router.js"></script>
+    <script type="module" src="script/menu.js"></script>
 </body>
 
 </html>
