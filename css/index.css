@@ -128,7 +128,7 @@ table {
   border-spacing: 0;
 }
 
-/* header */
+/* header//////////////////////////////////////// */
 .navbar {
   position: fixed;
   top: 0;
@@ -256,6 +256,65 @@ table {
   transition: left 0.3s ease;
 }
 
+/* footer //////////////////////////////// */
+footer {
+  background-color: #7d4b1a;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Conteneur Grid */
+.footercontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+  grid-gap: 10px; /* Espacement entre les divs */
+  padding: 20px;
+}
+
+.horairecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.horairecontainer h3,
+.horairebox h3,
+.social-icons h3 {
+  margin-bottom: 20px;
+}
+
+.horairebox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hboxitems {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.hboxitems span {
+  text-align: left;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+footer .propulsion {
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar ul {
@@ -264,5 +323,10 @@ table {
 
   .burger {
     display: flex; /* Affiche le menu burger */
+  }
+
+  .footercontainer {
+    grid-template-columns: 1fr; /* 1 colonne sur petit écran */
+    grid-gap: 30px;
   }
 }
