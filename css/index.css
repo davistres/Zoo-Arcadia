@@ -128,7 +128,121 @@ table {
   border-spacing: 0;
 }
 
-/* header//////////////////////////////////////// */
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* couleur et font ///////////////////////////////////////////////////////////////////////////////// */
+
+.green {
+  color: #4a7c2b;
+}
+
+.lightgreen {
+  color: #a8d5ba;
+}
+
+.beige {
+  color: #f5f0e1;
+}
+
+.brown {
+  color: #7d4b1a;
+}
+
+.black {
+  color: #000000;
+}
+
+/* Ordi H1 */
+.oh {
+  font-family: "Noto Sans";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.125rem;
+}
+
+/* Ordi fort */
+.of {
+  font-family: "Noto Sans";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-decoration: none;
+}
+
+/* menu ordi / mobile + Mobile style primary*/
+.om {
+  font-family: "Noto Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+/* Ordi usual */
+.ou {
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+/* Ordi usual bold*/
+.oub {
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+  .oh {
+    font-family: "Noto Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    text-decoration: none;
+  }
+
+  .of {
+    font-family: "Noto Sans";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+
+  .ou {
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  .oub {
+    font-family: Montserrat;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+  }
+}
+
+/* header///////////////////////////////////////////////////////////////////////////////// */
 .navbar {
   position: fixed;
   top: 0;
@@ -139,7 +253,11 @@ table {
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px 10px 10px;
-  z-index: 1;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
 }
 
 .navbar .logo {
@@ -153,12 +271,6 @@ table {
   margin-left: 10px;
 }
 
-.navbar .logo h1 {
-  color: #f5f0e1;
-  font-size: 1.5rem;
-  margin-bottom: 0rem;
-}
-
 /* Navigation links */
 .navbar ul {
   list-style: none;
@@ -169,12 +281,6 @@ table {
 
 .navbar ul li {
   display: inline;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #f5f0e1;
-  font-weight: bold;
 }
 
 .navbar ul li a:hover {
@@ -208,7 +314,7 @@ table {
   display: flex;
   flex-direction: column;
   padding-top: 100px;
-  z-index: 0;
+  z-index: 100;
 }
 
 .mobile-menu a {
@@ -218,8 +324,6 @@ table {
   width: 100%;
   padding: 15px 20px;
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -242,7 +346,7 @@ table {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
-  color: white;
+  color: #f5f0e1;
   cursor: pointer;
 }
 
@@ -256,7 +360,358 @@ table {
   transition: left 0.3s ease;
 }
 
-/* footer //////////////////////////////// */
+/* Présentation //////////////////////////////////////////////////////////////////////// */
+
+/* Section Présentation */
+.presentation {
+  width: auto;
+  margin: 71px auto 0 auto;
+  padding: 20px;
+  background-color: #f5f0e1;
+}
+
+.presentation h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Conteneur de chaque bloc */
+.presentation-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+/* Alternance : image à droite pour les blocs pairs */
+.presentation-container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.presentation-container img {
+  width: 340px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.presentation-text {
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Responsive pour Mobile */
+@media (max-width: 768px) {
+  .presentation-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .presentation-container:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .presentation-container img {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .presentation-text {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Habitat //////////////////////////////// */
+
+.habitats-section {
+  background-color: #4a7c2b;
+  color: #f5f0e1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  margin-bottom: 20px;
+}
+
+.habitats-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1540px;
+  margin: 0 auto 20px auto;
+}
+
+.habitat-card {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.habitat-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.habitat-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Bouton "En savoir +" */
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #7d4b1a;
+  transition: background-color 0.3s ease;
+  border-radius: 2.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #f5f0e1;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.125rem; /* 138.889% */
+}
+
+.learn-more-btn:hover {
+  background-color: #a8d5ba;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Styles */
+@media (min-width: 480px) {
+  .habitats-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* Trois colonnes sur écran large */
+  }
+
+  .section-subtitle {
+    margin-bottom: 30px;
+  }
+
+  .learn-more-btn {
+    padding: 15px 30px;
+  }
+}
+
+/* service //////////////////////////////////////////////////////////////////////// */
+
+/* Section Services (Mobile) */
+.services-section-mobile {
+  background-color: #f5f0e1;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title-mobile {
+  margin-bottom: 10px;
+}
+
+.section-subtitle-mobile {
+  margin-bottom: 20px;
+}
+
+.services-container-mobile {
+  display: flex;
+  flex-direction: column;
+  /* Les cartes en colonne pour mobile */
+  align-items: center;
+  gap: 20px;
+}
+
+.service-card-mobile {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-mobile {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.service-title-mobile {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (min-width: 480px) {
+  .services-container-mobile {
+    flex-direction: row;
+    /* Les cartes en ligne pour écrans moyens et grands */
+    justify-content: center;
+  }
+
+  .service-card-mobile {
+    width: 30%;
+    /* Prend 30% de la largeur du conteneur */
+  }
+}
+
+/* ANIMAUX /////////////////////////////////////////////////////// */
+/* Section Animaux (Mobile) */
+.animals-section-mobile {
+  padding: 20px;
+  text-align: center;
+  background-color: #4a7c2b;
+}
+
+.asection-title-mobile {
+  margin-bottom: 10px;
+}
+
+.asection-subtitle-mobile {
+  margin-bottom: 20px;
+}
+
+.animals-container-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.animal-card-mobile {
+  background-color: #a8d5ba;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animal-image-mobile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.animal-info-mobile {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.animal-name-mobile {
+  margin-bottom: 10px;
+}
+
+/* Les avis ////////////////////////////////////////// */
+
+/* Section Vos avis */
+.avis-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f0e1;
+}
+
+.avsection-title {
+  margin-bottom: 10px;
+}
+
+.avsection-subtitle {
+  margin-bottom: 20px;
+}
+
+/* Cards d'avis */
+.avis-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+
+.avis-card {
+  background-color: #d2e8d2;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avis-title {
+  margin-bottom: 10px;
+}
+
+.avis-text {
+  font-size: 0.9rem;
+}
+
+/* Formulaire d'avis */
+.leave-avis-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.leave-avis-subtitle {
+  margin-bottom: 20px;
+}
+
+.avis-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 1rem;
+  color: #7d4b1a;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #7d4b1a;
+}
+
+textarea.form-input {
+  height: 100px;
+}
+
+/* footer ////////////////////////////////////////// */
 footer {
   background-color: #7d4b1a;
   padding: 20px;

@@ -1,0 +1,88 @@
+/* Section Connexion */
+.p-login-section {
+  background-color: #f5f0e1;
+  /* Beige clair */
+  padding: 40px;
+  color: #333;
+  max-width: 600px;
+  margin: 71px auto 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.p-login-section h1 {
+  font-size: 2rem;
+  color: #4a7c2b;
+  /* Vert foncé */
+  margin-bottom: 20px;
+}
+
+.p-login-section p {
+  color: #7d4b1a;
+  /* Marron clair */
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Formulaire */
+.p-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.p-login-form label {
+  text-align: left;
+  font-size: 1rem;
+  color: #7d4b1a;
+  /* Marron clair */
+}
+
+.p-login-form input {
+  padding: 10px;
+  border: 2px solid #7d4b1a;
+  /* Bordure marron */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.p-login-form input:focus {
+  border-color: #4a7c2b;
+  /* Vert foncé lors de la sélection */
+  outline: none;
+}
+
+/* Bouton de connexion */
+.p-login-button {
+  padding: 10px;
+  background-color: #4a7c2b;
+  /* Vert foncé */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.p-login-button:hover {
+  background-color: #7d4b1a;
+  /* Marron lors du hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .p-login-section {
+    padding: 10px;
+  }
+
+  .p-login-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .p-login-button {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}

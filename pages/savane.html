@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les différents habitats</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e1;
+        }
+
+        .habitat-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f0e1;
+        }
+
+        /* Titre de section */
+        .habitat-section h2 {
+            color: #4a7c2b;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        /* Habitat principal - Description */
+        .habitat-description {
+            background-color: #a8d5ba;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .habitat-description h3 {
+            color: #4a7c2b;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .habitat-description p {
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .habitat-description .vet-info {
+            font-weight: bold;
+            color: #4a7c2b;
+            margin-bottom: 10px;
+        }
+
+        /* Images des animaux */
+        .animal-selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .animal-selection img {
+            width: 80px;
+            height: 80px;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+
+        .animal-selection p {
+            color: #333;
+            margin: 0 10px;
+        }
+
+        /* Autres habitats */
+        .other-habitats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .habitat-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+
+        .habitat-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .habitat-card .habitat-title {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .habitat-card .button {
+            background-color: #7d4b1a;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .habitat-card .button:hover {
+            background-color: #a8d5ba;
+            color: #333;
+        }
+
+        /* Styles responsive */
+        @media (min-width: 769px) {
+            .habitat-section {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+
+            .habitat-description {
+                max-width: 400px;
+                margin-right: 20px;
+            }
+
+            .other-habitats {
+                flex-direction: column;
+            }
+
+            .habitat-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="habitat-section">
+        <!-- Section Description de l'habitat principal (Savane) -->
+        <div class="habitat-description">
+            <h3>SAVANE</h3>
+            <p>Description de l'habitat</p>
+            <p>La savane africaine est un vaste écosystème caractérisé par de grandes plaines herbeuses parsemées
+                d'arbres
+                épars, offrant un habitat idéal pour une variété d'animaux sauvages. C'est un environnement dynamique où
+                les saisons sèches et humides influencent la flore et la faune.</p>
+
+            <p class="vet-info">Mot du vétérinaire:</p>
+            <p>RAS. Bâtiment rénové il y a peu de temps.</p>
+
+            <!-- Sélection des animaux -->
+            <div class="animal-selection">
+                <img src="https://via.placeholder.com/80x80?text=Lion" alt="Lion">
+                <p>Cliquez sur l'un des animaux</p>
+                <img src="https://via.placeholder.com/80x80?text=Éléphant" alt="Éléphant">
+            </div>
+        </div>
+
+        <!-- Autres habitats (Jungle, Marais) -->
+        <div class="other-habitats">
+            <div class="habitat-card">
+                <img src="https://via.placeholder.com/300x300?text=Jungle" alt="Jungle">
+                <div class="habitat-title">JUNGLE</div>
+                <a href="#" class="button">En savoir +</a>
+            </div>
+
+            <div class="habitat-card">
+                <img src="https://via.placeholder.com/300x300?text=Marais" alt="Marais">
+                <div class="habitat-title">MARAIS</div>
+                <a href="#" class="button">En savoir +</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

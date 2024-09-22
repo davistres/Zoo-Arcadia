@@ -1,0 +1,64 @@
+/* Section Services */
+.s-services-section {
+  text-align: center;
+  background-color: #f5f0e1;
+  padding: 20px 20px 0 20px;
+  margin: 71px auto 0 auto;
+}
+
+.s-section-title {
+  margin-bottom: 20px;
+}
+
+/* Container des services */
+.s-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Un service */
+.s-service-item {
+  background-color: #f5f0e1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Image du service */
+.s-service-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-service-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+/* Description du service */
+.s-service-description {
+  padding: 15px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .s-services-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .s-service-item {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .s-service-image {
+    height: 300px;
+  }
+}
