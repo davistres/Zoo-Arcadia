@@ -53,6 +53,42 @@
   outline: none;
 }
 
+/* Message d'erreur */
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.loginButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #7d4b1a;
+  transition: background-color 0.3s ease;
+  border-radius: 2.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #f5f0e1;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+}
+
+.loginButton:hover {
+  background-color: #a8d5ba;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.c-login-form label,
+.c-login-form input {
+  display: block;
+  margin-bottom: 10px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .c-login-section {
