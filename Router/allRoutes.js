@@ -17,6 +17,9 @@ export const allRoutes = [
     "/script/habitat.js"
   ),
   new Route("/services", "Tous les services", "/pages/services.html"),
+  new Route("/compteadmin", "Administrateur", "/pages/admin.html"),
+  new Route("/compteveto", "Vétérinaire", "/pages/veto.html"),
+  new Route("/compteemployé", "Employé", "/pages/employe.html"),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename

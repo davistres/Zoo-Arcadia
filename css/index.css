@@ -365,15 +365,16 @@ header {
   transition: left 0.3s ease;
 }
 
-/* Cacher l'onglet Connexion/Déconnexion */
-.hidden {
-  display: none;
-}
-
-/* Afficher les onglets dynamiques */
 .admin,
 .employe,
-.veterinaire {
+.veterinaire,
+#menuDeconnexion {
+  display: none;
+}
+.mobile-menu .admin,
+.mobile-menu .employe,
+.mobile-menu .veterinaire,
+#menuDeconnexionMobile {
   display: none;
 }
 

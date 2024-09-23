@@ -1,68 +1,85 @@
-// Éléments du DOM
+// DOM Elements
 const menuConnexion = document.getElementById("menuConnexion");
 const menuDeconnexion = document.getElementById("menuDeconnexion");
+const menuConnexionMobile = document.getElementById("menuConnexionMobile");
+const menuDeconnexionMobile = document.getElementById("menuDeconnexionMobile");
 const loginForm = document.getElementById("c-login-form");
 const errorMessage = document.getElementById("errorMessage");
-
 const adminLink = document.querySelector(".admin");
 const employeLink = document.querySelector(".employe");
 const veterinaireLink = document.querySelector(".veterinaire");
 
-// Simulation de connexion avec mot de passe
-loginForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // Empêche le rechargement de la page lors de la soumission
+// Sauvegarde du rôle dans LocalStorage
+const savedRole = localStorage.getItem("role");
 
-  const username = document.getElementById("username").value;
+// Gestion des états des menus
+function updateMenuForRole(role) {
+  // Cacher tous les liens de rôle
+  adminLink.style.display = "none";
+  employeLink.style.display = "none";
+  veterinaireLink.style.display = "none";
+
+  // Montrer le bon lien selon le rôle
+  if (role === "admin") {
+    adminLink.style.display = "block";
+    document.querySelector(".mobile-menu .admin").style.display = "block";
+  } else if (role === "employe") {
+    employeLink.style.display = "block";
+    document.querySelector(".mobile-menu .employe").style.display = "block";
+  } else if (role === "veterinaire") {
+    veterinaireLink.style.display = "block";
+    document.querySelector(".mobile-menu .veterinaire").style.display = "block";
+  }
+
+  // Mise à jour des menus Connexion/Déconnexion
+  menuConnexion.style.display = "none";
+  menuDeconnexion.style.display = "block";
+  menuConnexionMobile.style.display = "none";
+  menuDeconnexionMobile.style.display = "block";
+}
+
+// Si un rôle est déjà sauvegardé, mettre à jour les menus
+if (savedRole) {
+  updateMenuForRole(savedRole);
+}
+
+// Gestion de la soumission du formulaire de connexion
+loginForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Empêche le rechargement de la page
+
   const password = document.getElementById("password").value;
 
-  // Mots de passe définis pour chaque rôle
+  // Définition des mots de passe pour chaque rôle
   const passwords = {
     "0003": "admin",
     "0001": "employe",
     "0002": "veterinaire",
   };
 
-  // Réinitialiser le message d'erreur
-  errorMessage.textContent = "";
-
   // Vérification du mot de passe
   const role = passwords[password];
   if (role) {
-    // Si le mot de passe est correct, cacher le formulaire
+    // Sauvegarder le rôle dans LocalStorage
+    localStorage.setItem("role", role);
+
+    // Mettre à jour les menus
+    updateMenuForRole(role);
+
+    // Cacher le formulaire de connexion
     loginForm.style.display = "none";
-
-    // Afficher Déconnexion et cacher Connexion
-    menuConnexion.classList.add("hidden");
-    menuDeconnexion.classList.remove("hidden");
-
-    // Afficher l'onglet correspondant au rôle
-    if (role === "admin") {
-      adminLink.style.display = "block";
-    } else if (role === "employe") {
-      employeLink.style.display = "block";
-    } else if (role === "veterinaire") {
-      veterinaireLink.style.display = "block";
-    }
   } else {
-    // Si le mot de passe est incorrect, afficher un message d'erreur
+    // Afficher un message d'erreur si le mot de passe est incorrect
     errorMessage.textContent = "Mot de passe incorrect.";
   }
 });
 
-// Déconnexion (réinitialiser l'état)
+// Gestion de la déconnexion
 menuDeconnexion.addEventListener("click", function () {
-  // Réinitialiser le menu et afficher le formulaire
-  menuConnexion.classList.remove("hidden");
-  menuDeconnexion.classList.add("hidden");
+  localStorage.removeItem("role"); // Supprimer le rôle sauvegardé
+  location.reload(); // Recharger la page pour réinitialiser l'état
+});
 
-  // Cacher tous les onglets
-  adminLink.style.display = "none";
-  employeLink.style.display = "none";
-  veterinaireLink.style.display = "none";
-
-  // Réafficher le formulaire de connexion
-  loginForm.style.display = "block";
-  document.getElementById("username").value = "";
-  document.getElementById("password").value = "";
-  errorMessage.textContent = ""; // Réinitialiser le message d'erreur
+menuDeconnexionMobile.addEventListener("click", function () {
+  localStorage.removeItem("role"); // Supprimer le rôle sauvegardé
+  location.reload(); // Recharger la page pour réinitialiser l'état
 });
