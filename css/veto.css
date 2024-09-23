@@ -1,0 +1,60 @@
+.vet-animal-reports,
+.vet-habitat-comments,
+.vet-food-consumption {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.vet-animal-reports h2,
+.vet-habitat-comments h2,
+.vet-food-consumption h2 {
+  margin-bottom: 20px;
+}
+
+.mainveto textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.mainveto button {
+  background-color: #4a7c2b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mainveto button:hover {
+  background-color: #7d4b1a;
+}
+
+.mainveto {
+  margin-top: 64px;
+}
+
+.vet-animal-report,
+.vet-habitat,
+.food-log-entry {
+  margin-bottom: 20px;
+}
+
+.food-log-entry h3 {
+  font-size: 1.25rem;
+}
+
+.vet-habitat textarea {
+  margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mainveto button,
+  .mainveto textarea {
+    width: 100%;
+  }
+}

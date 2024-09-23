@@ -1,0 +1,100 @@
+<main class="mainadmin">
+    <!-- Section Gestion des comptes -->
+    <section class="admin-user-management">
+        <h2>Gestion des comptes « Employé » et « Vétérinaire »</h2>
+        <div class="user-management-container">
+            <div class="user-form">
+                <h3>Créer un compte</h3>
+                <form id="create-user-form">
+                    <label for="user-type">Type de compte :</label>
+                    <select id="user-type">
+                        <option value="employe">Employé</option>
+                        <option value="veterinaire">Vétérinaire</option>
+                    </select>
+
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" placeholder="Mot de passe" required>
+
+                    <button type="submit" class="btn-create-user">Créer</button>
+                </form>
+            </div>
+
+            <div class="user-list">
+                <h3>Liste des comptes</h3>
+                <ul id="user-list">
+                    <!-- Les comptes utilisateurs apparaîtront ici -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Gestion des horaires, services, habitats et animaux -->
+    <section class="admin-content-management">
+        <h2>Gestion du contenu du zoo</h2>
+        <div class="content-management">
+            <h3>Horaires</h3>
+            <textarea id="zoo-hours" rows="3" placeholder="Modifier les horaires du zoo..."></textarea>
+            <button class="btn-save-hours">Enregistrer les horaires</button>
+
+            <h3>Services</h3>
+            <textarea id="zoo-services" rows="3" placeholder="Modifier les services du zoo..."></textarea>
+            <button class="btn-save-services">Enregistrer les services</button>
+
+            <h3>Habitats</h3>
+            <textarea id="zoo-habitats" rows="3" placeholder="Modifier les habitats du zoo..."></textarea>
+            <button class="btn-save-habitats">Enregistrer les habitats</button>
+
+            <h3>Animaux</h3>
+            <textarea id="zoo-animals" rows="3" placeholder="Ajouter ou modifier la liste des animaux..."></textarea>
+            <button class="btn-save-animals">Enregistrer la liste des animaux</button>
+        </div>
+    </section>
+
+    <!-- Section Comptes rendus vétérinaires -->
+    <section class="admin-vet-reports">
+        <h2>Comptes rendus vétérinaires</h2>
+        <div class="filter-container">
+            <label for="filter-animal">Filtrer par animal :</label>
+            <select id="filter-animal">
+                <option value="all">Tous les animaux</option>
+                <option value="lion">Lion</option>
+                <option value="elephant">Elephant</option>
+                <option value="jaguar">Jaguar</option>
+            </select>
+
+            <label for="filter-date">Filtrer par date :</label>
+            <input type="date" id="filter-date">
+
+            <button class="btn-apply-filters">Appliquer les filtres</button>
+        </div>
+
+        <div id="vet-reports-container">
+            <!-- Les comptes rendus vétérinaires filtrés s'afficheront ici -->
+        </div>
+    </section>
+
+    <!-- Section Dashboard -->
+    <section class="admin-dashboard">
+        <h2>Dashboard - Nombre de consultations par animal</h2>
+        <div class="dashboard-container">
+            <div class="dashboard-stat" id="stat-lion">
+                <h3>Lion</h3>
+                <p>Consultations : <span id="lion-count">0</span></p>
+            </div>
+            <div class="dashboard-stat" id="stat-elephant">
+                <h3>Elephant</h3>
+                <p>Consultations : <span id="elephant-count">0</span></p>
+            </div>
+            <div class="dashboard-stat" id="stat-jaguar">
+                <h3>Jaguar</h3>
+                <p>Consultations : <span id="jaguar-count">0</span></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script/admin.js"></script>
+<script src="/script/auth.js"></script>

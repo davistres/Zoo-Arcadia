@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/habitats.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/connexion.css">
-    <!-- <link rel="stylesheet" href="css/employe.css"> -->
+    <link rel="stylesheet" href="css/employe.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/veto.css">
     <title>Zoo ARCADIA</title>
 </head>
 
@@ -32,11 +34,11 @@
                 <li><a href="/services" class="om beige">Services</a></li>
                 <li><a href="/habitats" class="om beige">Habitats</a></li>
                 <li><a href="/contact" class="om beige">Contact</a></li>
-                <li> <a href="#admin" class="admin om beige">Administrateur</a></li>
-                <li><a href="#veterinaire" class="veterinaire om beige">Vétérinaire</a></li>
-                <li><a href="#employe" class="employe om beige">Employé</a></li>
+                <li> <a href="/compteadmin" class="admin om beige">Administrateur</a></li>
+                <li><a href="/compteveto" class="veterinaire om beige">Vétérinaire</a></li>
+                <li><a href="/compteemploye" class="employe om beige">Employé</a></li>
                 <li><a href="/connexion" id="menuConnexion" class="om beige">Connexion</a></li>
-                <li><a href="#deconnexion" id="menuDeconnexion" class="om beige">Déconnexion</a></li>
+                <li><a href="/" id="menuDeconnexion" class="om beige">Déconnexion</a></li>
             </ul>
 
             <!-- Burger Menu (Mobile) -->
@@ -57,11 +59,11 @@
         <a href="/habitats" class="om beige"><img src="ressources/logo/Bank.png" alt="Bank Icon" />Habitats</a>
 
         <a href="/contact" class="om beige"><img src="ressources/logo/Pc.png" alt="PC Icon" />Contact</a>
-        <div class="admin"><a href="#admin" class="om beige"><img src="ressources/logo/FilePerson.png"
+        <div class="admin"><a href="/compteadmin" class="om beige"><img src="ressources/logo/FilePerson.png"
                     alt="PC Icon" />Administrateur</a></div>
-        <div class="veterinaire"><a href="#veterinaire" class="om beige"><img src="ressources/logo/FilePerson.png"
+        <div class="veterinaire"><a href="/compteveto" class="om beige"><img src="ressources/logo/FilePerson.png"
                     alt="PC Icon" />Vétérinaire</a></div>
-        <div class="employe"><a href="#employe" class="om beige"><img src="ressources/logo/FilePerson.png"
+        <div class="employe"><a href="/employe" class="om beige"><img src="ressources/logo/FilePerson.png"
                     alt="PC Icon" />Employé</a></div>
         <a href="/connexion" id="menuConnexionMobile" class="om beige"><img src="ressources/logo/Lock.png"
                 alt="Lock Icon" />Connexion</a>
@@ -141,7 +143,8 @@
     <script type="module" src="script/menu.js"></script>
     <script type="module" src="script/habitat.js"></script>
     <script type="module" src="script/connexion.js"></script>
-    <!-- <script type="module" src="script/employe.js"></script> -->
+    <script type="module" src="script/employe.js"></script>
+    <script src="/script/auth.js"></script>
 </body>
 </body>
 

@@ -1,0 +1,80 @@
+<main class="mainveto">
+    <!-- Section Compte rendu de santé -->
+    <section class="vet-animal-reports">
+        <h2>Compte rendu vétérinaire par animal</h2>
+        <div class="vet-reports-container">
+            <div class="vet-animal-report">
+                <h3>Compte rendu pour Lion</h3>
+                <textarea id="vet-health-status-lion" rows="4"
+                    placeholder="Écrire l'état de santé du lion ici..."></textarea>
+                <textarea id="vet-note-lion" rows="4" placeholder="Ajouter une note du vétérinaire..."></textarea>
+                <button class="btn-save-report" data-animal="lion">Enregistrer le compte rendu</button>
+            </div>
+
+            <div class="vet-animal-report">
+                <h3>Compte rendu pour Elephant</h3>
+                <textarea id="vet-health-status-elephant" rows="4"
+                    placeholder="Écrire l'état de santé de l'éléphant ici..."></textarea>
+                <textarea id="vet-note-elephant" rows="4" placeholder="Ajouter une note du vétérinaire..."></textarea>
+                <button class="btn-save-report" data-animal="elephant">Enregistrer le compte rendu</button>
+            </div>
+
+            <div class="vet-animal-report">
+                <h3>Compte rendu pour Jaguar</h3>
+                <textarea id="vet-health-status-jaguar" rows="4"
+                    placeholder="Écrire l'état de santé du jaguar ici..."></textarea>
+                <textarea id="vet-note-jaguar" rows="4" placeholder="Ajouter une note du vétérinaire..."></textarea>
+                <button class="btn-save-report" data-animal="jaguar">Enregistrer le compte rendu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Commentaire sur les habitats -->
+    <section class="vet-habitat-comments">
+        <h2>Commentaires sur les habitats</h2>
+        <div class="vet-habitat-container">
+            <div class="vet-habitat">
+                <h3>Habitat Savane</h3>
+                <textarea id="vet-comment-savane" rows="3"
+                    placeholder="Ajouter un commentaire sur l'habitat de la savane..."></textarea>
+                <button class="btn-save-habitat-comment" data-habitat="savane">Enregistrer le commentaire</button>
+            </div>
+
+            <div class="vet-habitat">
+                <h3>Habitat Jungle</h3>
+                <textarea id="vet-comment-jungle" rows="3"
+                    placeholder="Ajouter un commentaire sur l'habitat de la jungle..."></textarea>
+                <button class="btn-save-habitat-comment" data-habitat="jungle">Enregistrer le commentaire</button>
+            </div>
+
+            <div class="vet-habitat">
+                <h3>Habitat Marais</h3>
+                <textarea id="vet-comment-marais" rows="3"
+                    placeholder="Ajouter un commentaire sur l'habitat des marais..."></textarea>
+                <button class="btn-save-habitat-comment" data-habitat="marais">Enregistrer le commentaire</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Consommation de nourriture des animaux -->
+    <section class="vet-food-consumption">
+        <h2>Historique des consommations de nourriture</h2>
+        <div class="vet-food-log">
+            <div class="food-log-entry" id="food-log-lion">
+                <h3>Historique du Lion</h3>
+                <!-- L'historique de consommation de nourriture s'affichera ici -->
+            </div>
+            <div class="food-log-entry" id="food-log-elephant">
+                <h3>Historique de l'Elephant</h3>
+                <!-- L'historique de consommation de nourriture s'affichera ici -->
+            </div>
+            <div class="food-log-entry" id="food-log-jaguar">
+                <h3>Historique du Jaguar</h3>
+                <!-- L'historique de consommation de nourriture s'affichera ici -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="/script/veto.js"></script>
+<script src="/script/auth.js"></script>

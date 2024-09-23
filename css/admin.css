@@ -1,0 +1,77 @@
+/* Style général */
+
+.mainadmin {
+  margin-top: 64px;
+}
+
+.mainadmin section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.mainadmin h2 {
+  margin-bottom: 20px;
+}
+
+.mainadmin textarea,
+.mainadmin input,
+.mainadmin select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.mainadmin button {
+  background-color: #4a7c2b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mainadmin button:hover {
+  background-color: #7d4b1a;
+}
+
+/* User management styles */
+.user-management-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-form,
+.user-list {
+  width: 48%;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list li {
+  margin-bottom: 10px;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-stat {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.dashboard-stat h3 {
+  margin-bottom: 10px;
+}

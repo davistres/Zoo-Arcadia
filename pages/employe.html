@@ -1,82 +1,79 @@
-<header>
-    <h1>Espace Employé</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/employe">Espace Employé</a></li>
-            <li><a href="#" id="logout">Déconnexion</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
+<main class="mainemploye">
     <!-- Section Validation des commentaires -->
-    <section class="comment-validation-section">
+    <section class="employee-comment-validation">
         <h2>Validation des commentaires</h2>
-        <div id="pending-comments">
+        <div id="employee-pending-comments">
             <!-- Les commentaires en attente de validation s'afficheront ici -->
         </div>
+        <button class="btn-validate-comment" id="validate-comment-btn">Valider les commentaires</button>
     </section>
 
     <!-- Section Modifier les services -->
-    <section class="edit-services-section">
+    <section class="employee-edit-services">
         <h2>Modifier les services du zoo</h2>
-        <div id="services-list">
+        <div id="employee-services-list">
             <!-- Liste des services éditables -->
-            <div class="service-item">
-                <h3>Service 1: <span id="service-title-1">Se restaurer au zoo</span></h3>
-                <textarea id="service-description-1"
-                    rows="3">Un service de snacking est ouvert de 11H jusqu’à la fermeture...</textarea>
-                <button onclick="updateService(1)">Enregistrer</button>
+            <div class="employee-service-item">
+                <h3>Service 1: <span class="employee-service-title">Se restaurer au zoo</span></h3>
+                <textarea class="employee-service-description" id="service-description-1"
+                    rows="3">Un service de snacking est ouvert de 11H jusqu’à la fermeture. De plus, un restaurant fait avec nos produits bio et frais est ouvert de 12h à 15h.</textarea>
+                <button class="btn-update-service" data-service-id="1">Enregistrer</button>
             </div>
-            <div class="service-item">
-                <h3>Service 2: <span id="service-title-2">Guide gratuit</span></h3>
-                <textarea id="service-description-2" rows="3">Nous vous proposons un guide gratuit...</textarea>
-                <button onclick="updateService(2)">Enregistrer</button>
+            <div class="employee-service-item">
+                <h3>Service 2: <span class="employee-service-title">Guide gratuit</span></h3>
+                <textarea class="employee-service-description" id="service-description-2"
+                    rows="3">Nous vous proposons un guide gratuit pour faire le tour du zoo et répondre à vos questions. Et cela, trois fois par jour: à 10h, 14h et 16h...</textarea>
+                <button class="btn-update-service" data-service-id="2">Enregistrer</button>
             </div>
-            <!-- Ajoute autant de services que nécessaire -->
+            <div class="employee-service-item">
+                <h3>Service 3: <span class="employee-service-title">Petit train</span></h3>
+                <textarea class="employee-service-description" id="service-description-3"
+                    rows="3">Embarquez dans le zoo-express... Pas la peine de marcher... Un départ toutes les 30min.</textarea>
+                <button class="btn-update-service" data-service-id="3">Enregistrer</button>
+            </div>
         </div>
     </section>
 
     <!-- Section Ajouter la consommation de nourriture -->
-    <section class="food-consumption-section">
+    <section class="employee-food-consumption">
         <h2>Ajouter une consommation de nourriture</h2>
-        <form id="food-form">
+        <form id="employee-food-form">
             <label for="animal-select">Sélectionner un animal :</label>
-            <select id="animal-select" required>
+            <select id="employee-animal-select" required>
                 <option value="Lion">Lion</option>
                 <option value="Elephant">Elephant</option>
                 <option value="Jaguar">Jaguar</option>
-                <!-- Ajoute plus d'animaux si nécessaire -->
             </select>
 
             <label for="food-date">Date :</label>
-            <input type="date" id="food-date" required>
+            <input type="date" id="employee-food-date" required>
 
             <label for="food-time">Heure :</label>
-            <input type="time" id="food-time" required>
+            <input type="time" id="employee-food-time" required>
 
             <label for="food-type">Nourriture :</label>
-            <input type="text" id="food-type" placeholder="Entrez le type de nourriture" required>
+            <input type="text" id="employee-food-type" placeholder="Entrez le type de nourriture" required>
 
             <label for="food-quantity">Quantité (kg) :</label>
-            <input type="number" id="food-quantity" placeholder="Quantité en kg" required>
+            <input type="number" id="employee-food-quantity" placeholder="Quantité en kg" required>
 
-            <button type="submit">Ajouter</button>
+            <button type="submit" class="btn-add-food">Ajouter</button>
         </form>
 
-        <div id="food-log">
+        <div id="employee-food-log">
             <!-- Les consommations ajoutées s'afficheront ici -->
         </div>
     </section>
 
     <!-- Section Voir les messages de contact -->
-    <section class="contact-messages-section">
+    <section class="employee-contact-messages">
         <h2>Messages reçus via le formulaire de contact</h2>
-        <div id="contact-messages">
+        <div id="employee-contact-messages">
             <!-- Les messages seront affichés ici -->
         </div>
     </section>
 </main>
 
-<script src="script/employe.js"></script>
+<!-- Script JS -->
+<script src="script/employee.js"></script>
+<script src="/script/auth.js"></script>
