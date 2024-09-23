@@ -32,19 +32,3 @@
   font-size: 4rem;
   color: #4a7c2b;
 }
-
-.gobacktohome {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4a7c2b;
-  color: #f5f0e1;
-  text-decoration: none;
-  border-radius: 40px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.gobacktohome:hover {
-  background-color: #a8d5ba;
-}

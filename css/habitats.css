@@ -3,7 +3,7 @@
   text-align: center;
   background-color: #f5f0e1;
   padding: 20px 20px 0 20px;
-  margin: 71px auto 0 auto;
+  margin: 62px auto 0 auto;
 }
 
 .h-section-title {
@@ -33,21 +33,6 @@
 .h-habitat-title {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
-}
-
-.learn-more-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4a7c2b;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.learn-more-btn:hover {
-  background-color: #7d4b1a;
 }
 
 /* Description */
@@ -132,7 +117,7 @@
 
 /* Styles pour le pop-up (caché par défaut) */
 .popup-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -141,9 +126,11 @@
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 }
 
 .popup-content {
+  position: fixed;
   text-align: center;
   position: relative;
 }
@@ -215,11 +202,4 @@
 
 .vet-note {
   margin: 15px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .animal-card {
-    width: 90%;
-  }
 }

@@ -164,10 +164,10 @@ html {
 /* Ordi H1 */
 .oh {
   font-family: "Noto Sans";
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 3.125rem;
+  line-height: 3rem;
 }
 
 /* Ordi fort */
@@ -189,21 +189,21 @@ html {
   line-height: 1.5rem;
 }
 
-/* Ordi usual */
-.ou {
-  font-family: Montserrat;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5rem;
-}
-
 /* Ordi usual bold*/
 .oub {
   font-family: Montserrat;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   font-style: normal;
   font-weight: 700;
+  line-height: 1.5rem;
+}
+
+/* Ordi usual */
+.ou {
+  font-family: Montserrat;
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1.5rem;
 }
 
@@ -223,26 +223,31 @@ html {
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 
-  .ou {
-    font-family: Montserrat;
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
-  }
   .oub {
     font-family: Montserrat;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem;
+    line-height: 1.3rem;
+  }
+
+  .ou {
+    font-family: Montserrat;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2rem;
   }
 }
 
 /* header///////////////////////////////////////////////////////////////////////////////// */
+header {
+  position: absolute;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -252,7 +257,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 10px 10px;
+  padding: 5px 5px 5px 5px;
   z-index: 1000;
 }
 
@@ -268,7 +273,6 @@ html {
 .navbar .logo img {
   width: 60px;
   margin-right: 10px;
-  margin-left: 10px;
 }
 
 /* Navigation links */
@@ -365,9 +369,10 @@ html {
 /* Section Présentation */
 .presentation {
   width: auto;
-  margin: 71px auto 0 auto;
+  margin: 62px auto 0 auto;
   padding: 20px;
   background-color: #f5f0e1;
+  position: relative;
 }
 
 .presentation h1 {
@@ -389,15 +394,17 @@ html {
 }
 
 .presentation-container img {
-  width: 340px;
-  height: auto;
-  border-radius: 10px;
-  flex-shrink: 0;
+  width: 800px;
+  height: 240px;
+  object-fit: cover;
 }
 
 .presentation-text {
-  max-width: 600px;
+  width: 760px;
   padding: 20px;
+  height: 200px;
+  display: flex;
+  align-items: center;
 }
 
 /* Responsive pour Mobile */
@@ -484,10 +491,9 @@ html {
   text-decoration: none;
   text-align: center;
   font-family: "Noto Sans";
-  font-size: 2.25rem;
-  font-style: normal;
+  font-size: 1.5rem;
   font-weight: 700;
-  line-height: 3.125rem; /* 138.889% */
+  border: none;
 }
 
 .learn-more-btn:hover {
@@ -505,10 +511,6 @@ html {
 
   .section-subtitle {
     margin-bottom: 30px;
-  }
-
-  .learn-more-btn {
-    padding: 15px 30px;
   }
 }
 

@@ -25,7 +25,7 @@ buttons.forEach((button) => {
 
 /* Pop up */
 // Sélectionner les éléments
-const openPopupBtn = document.querySelector(".open-popup-btn-lion");
+const openPopupBtn = document.querySelector(".open-popup-btn");
 const popup = document.getElementById("popup");
 const closePopupBtn = document.querySelector(".close-popup-btn");
 
