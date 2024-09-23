@@ -30,15 +30,20 @@
                     <h3 class="oh beige">Les animaux:</h3>
                     <div class="h-habitatanimals">
                         <div class="h-habitatanimal">
-                            <img src="/ressources/images/lion.webp" alt="Lion" class="open-popup-btn">
+                            <img src="/ressources/images/lion.webp" alt="Lion" class="open-popup"
+                                data-image="/ressources/images/lion.webp" data-title="LION" data-surnom="GROS PATAPOUF"
+                                data-age="22 ans" data-poids="220 kg" data-hauteur="1,4 m" data-longueur="2,6 m"
+                                data-habitat="la savane">
                         </div>
                         <div>
                             <p class="om beige">Cliquez sur <br>l'un des <br>animaux</p>
 
                         </div>
                         <div class="h-habitatanimal">
-                            <a href="#"><img src="/ressources/images/elephant.webp" alt="Éléphant"
-                                    class="open-popup-btn-elephant"></a>
+                            <img src="/ressources/images/elephant.webp" alt="Éléphant" class="open-popup"
+                                data-image="/ressources/images/elephant.webp" data-title="ELEPHANT"
+                                data-surnom="GRAND PATAPOUF" data-age="58 ans" data-poids="5262 kg" data-hauteur="3,2 m"
+                                data-longueur="7,1 m" data-habitat="la savane">
                         </div>
                     </div>
                 </div>
@@ -71,14 +76,20 @@
                     <h3 class="oh beige">Les animaux:</h3>
                     <div class="h-habitatanimals">
                         <div class="h-habitatanimal">
-                            <a href="#"><img src="/ressources/images/jaguar.webp" alt="Jaguar"></a>
+                            <img src="/ressources/images/jaguar.webp" alt="Jaguar" class="open-popup"
+                                data-image="/ressources/images/jaguar.webp" data-title="JAGUAR"
+                                data-surnom="Force tranquille" data-age="13 ans" data-poids="76 kg" data-hauteur="92 cm"
+                                data-longueur="1,5 m" data-habitat="la jungle">
                         </div>
                         <div>
                             <p class="om beige">Cliquez sur <br>l'un des <br>animaux</p>
 
                         </div>
                         <div class="h-habitatanimal">
-                            <a href="#"><img src="/ressources/images/orangutan.webp" alt="Oran-Outan"></a>
+                            <img src="/ressources/images/orangutan.webp" alt="Oran-Outan" class="open-popup"
+                                data-image="/ressources/images/orangutan.webp" data-title="ORAN-OUTAN"
+                                data-surnom="Vieux sage" data-age="33 ans" data-poids="105 kg" data-hauteur="1,3 m"
+                                data-longueur="-" data-habitat="la jungle">
                         </div>
                     </div>
                 </div>
@@ -107,14 +118,20 @@
                     <h3 class="oh beige">Les animaux:</h3>
                     <div class="h-habitatanimals">
                         <div class="h-habitatanimal">
-                            <a href="#"><img src="/ressources/images/hippopotam.webp" alt="HIPPOPOTAME"></a>
+                            <img src="/ressources/images/hippopotam.webp" alt="HIPPOPOTAME" class="open-popup"
+                                data-image="/ressources/images/hippopotam.webp" data-title="HIPPOPOTAME"
+                                data-surnom="Princesse" data-age="28 ans" data-poids="1 124 kg" data-hauteur="1,2 m"
+                                data-longueur="3,9 m" data-habitat="les marais">
                         </div>
                         <div>
                             <p class="om beige">Cliquez sur <br>l'un des <br>animaux</p>
 
                         </div>
                         <div class="h-habitatanimal">
-                            <a href="#"><img src="/ressources/images/caiman.webp" alt="Caiman"></a>
+                            <img src="/ressources/images/caiman.webp" alt="Caiman" class="open-popup"
+                                data-image="/ressources/images/caiman.webp" data-title="CAIMEN" data-surnom="Timide"
+                                data-age="34 ans" data-poids="208 kg" data-hauteur="-" data-longueur="4,5 m"
+                                data-habitat="les marais">
                         </div>
                     </div>
                 </div>
@@ -136,80 +153,39 @@
 
 
 <!-- POP-UP LION-->
-<div class="popup-overlay" id="popup">
+<div id="popup-overlay" class="popup-overlay">
     <div class="popup-content">
         <div class="animal-card">
             <!-- Bouton de fermeture -->
-            <button class="close-popup-btn">&times;</button>
+            <button id="close-popup" class="close-popup">&times;</button>
 
             <!-- Image de l'animal -->
-            <img src="../ressources/images/lion.webp" alt="Lion">
+            <img id="popup-image" src="" alt="">
 
             <!-- Titre et sous-titre -->
-            <h1 class="oh green">LION</h1>
+            <h1 id="popup-title" class="oh green"></h1>
             <h3 class="om brown">Son surnom au zoo:</h3>
-            <div class="oub black"><em>GROS PATAPOUF</em></div>
+            <div id="popup-surnom" class="oub black"><em></em></div>
 
             <h2 class="of brown">Caractéristiques</h2>
             <div class="characteristics">
-                <div class="ou black"><span class="oub black">Son âge:</span> 22 ans</div>
-                <div class="ou black"><span class="oub black">Son poids:</span> 220 kg</div>
-                <div class="ou black"><span class="oub black">Hauteur:</span> 1,4 m</div>
-                <div class="ou black"><span class="oub black">Longueur:</span> 2,6 m</div>
+                <div class="ou black"><span class="oub black">Son âge:</span> <span id="popup-age">22 ans</span></div>
+                <div class="ou black"><span class="oub black">Son poids:</span> <span id="popup-poids">220 kg</span>
+                </div>
+                <div class="ou black"><span class="oub black">Hauteur:</span> <span id="popup-hauteur">1,4 m</span>
+                </div>
+                <div class="ou black"><span class="oub black">Longueur:</span> <span id="popup-longueur">2,6 m</span>
+                </div>
             </div>
 
             <h2 class="health-status of green">Etat de santé général:</h2>
-            <p class="ou black">Lion assez âgé. Il a eu quelques problèmes de santé mais aujourd'hui, il va très
+            <p class="ou black">Il a eu quelques problèmes de santé mais aujourd'hui, il va très
                 bien!
             </p>
 
             <h2 class="health-status of brown">Son histoire:</h2>
-            <p class="ou black">Blessé gravement par des braconniers, il ne pourrait plus vivre dans la savane.
-                Il
-                est
-                devenu un membre à
-                part entière du zoo.</p>
-
-            <h2 class="vet-note of green">Mot du vétérinaire:</h2>
-            <p class="ou black">Au vu de son âge, il a une corpulence tout à fait normale. Il est
-                heureux et épanoui dans son territoire.</p>
-        </div>
-    </div>
-</div>
-
-
-
-
-<!-- POP-UP ELEPHANT-->
-<div class="popup-overlay" id="popup">
-    <div class="popup-content">
-        <div class="animal-card">
-            <!-- Bouton de fermeture -->
-            <button class="close-popup-btn">&times;</button>
-
-            <!-- Image de l'animal -->
-            <img src="../ressources/images/elephant.webp" alt="Elephant">
-
-            <!-- Titre et sous-titre -->
-            <h1 class="oh green">LION</h1>
-            <h3 class="om brown">Son surnom au zoo:</h3>
-            <div class="oub black"><em>GROS PATAPOUF</em></div>
-
-            <h2 class="of brown">Caractéristiques</h2>
-            <div class="characteristics">
-                <div class="ou black"><span class="oub black">Son âge:</span> 22 ans</div>
-                <div class="ou black"><span class="oub black">Son poids:</span> 220 kg</div>
-                <div class="ou black"><span class="oub black">Hauteur:</span> 1,4 m</div>
-                <div class="ou black"><span class="oub black">Longueur:</span> 2,6 m</div>
-            </div>
-
-            <h2 class="health-status of green">Etat de santé général:</h2>
-            <p class="ou black">Lion assez âgé. Il a eu quelques problèmes de santé mais aujourd'hui, il va très
-                bien!
-            </p>
-
-            <h2 class="health-status of brown">Son histoire:</h2>
-            <p class="ou black">Blessé gravement par des braconniers, il ne pourrait plus vivre dans la savane.
+            <p class="ou black">Blessé gravement par des braconniers, il ne pourrait plus vivre dans <span
+                    id="popup-habitat"></span>.
                 Il
                 est
                 devenu un membre à
